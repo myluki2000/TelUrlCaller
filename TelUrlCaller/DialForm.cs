@@ -40,7 +40,10 @@ namespace TelUrlCaller
 
         private async Task Call()
         {
-            HttpResponseMessage res = await Dialer.Call(tbPhoneNumber.Text);
+            HttpResponseMessage res = await Dialer.Call(
+                tbPhoneNumber.Text, 
+                Properties.Settings.Default.Username, 
+                Properties.Settings.Default.Password);
             if (!res.IsSuccessStatusCode)
             {
                 MessageBox.Show("Failed to dial number. Response code: " + res.StatusCode);
