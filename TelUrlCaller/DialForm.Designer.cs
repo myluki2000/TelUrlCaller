@@ -95,6 +95,7 @@
             Controls.Add(tbPhoneNumber);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "DialForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Dialer";
             Load += DialForm_Load;
             ResumeLayout(false);
