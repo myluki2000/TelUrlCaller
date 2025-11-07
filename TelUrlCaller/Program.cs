@@ -17,7 +17,7 @@ namespace TelUrlCaller
                 Application.Run(new SettingsForm());
             } else if(args.Length == 1)
             {
-                Match match = Regex.Match(args[0], @"tel:((\+|0)[0-9]+)");
+                Match match = Regex.Match(args[0], @"tel:(\/\/)?((\+|0)[0-9]+)");
                 
                 if(!match.Success)
                 {
@@ -25,7 +25,7 @@ namespace TelUrlCaller
                     return;
                 }    
 
-                string phoneNumber = match.Groups[1].Value;
+                string phoneNumber = match.Groups[2].Value;
                 Application.Run(new DialForm(phoneNumber));
             } else
             {
