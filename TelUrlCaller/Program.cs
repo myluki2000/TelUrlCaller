@@ -11,9 +11,9 @@ namespace TelUrlCaller
         [STAThread]
         static void Main(string[] args)
         {
+            ApplicationConfiguration.Initialize();
             if (args.Length == 0 || string.IsNullOrEmpty(Properties.Settings.Default.ActionUri))
             {
-                ApplicationConfiguration.Initialize();
                 Application.Run(new SettingsForm());
             } else if(args.Length == 1)
             {
