@@ -20,7 +20,7 @@ namespace TelUrlCaller
                 new AuthenticationHeaderValue("Basic", Convert.ToBase64String(Encoding.ASCII.GetBytes(
                $"{username}:{password}")));
 
-            HttpResponseMessage res = await client.GetAsync(requestUri);
+            HttpResponseMessage res = await client.SendAsync(req);
             return res;
         }
     }
