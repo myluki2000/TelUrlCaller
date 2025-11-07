@@ -37,6 +37,7 @@
             cbAskBeforeDial = new CheckBox();
             btnSave = new Button();
             btnCancel = new Button();
+            cbAlwaysOnTop = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -100,7 +101,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(175, 124);
+            btnSave.Location = new Point(175, 149);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 7;
@@ -110,7 +111,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(256, 124);
+            btnCancel.Location = new Point(256, 149);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(75, 23);
             btnCancel.TabIndex = 8;
@@ -118,11 +119,22 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
+            // cbAlwaysOnTop
+            // 
+            cbAlwaysOnTop.AutoSize = true;
+            cbAlwaysOnTop.Location = new Point(12, 124);
+            cbAlwaysOnTop.Name = "cbAlwaysOnTop";
+            cbAlwaysOnTop.Size = new Size(132, 19);
+            cbAlwaysOnTop.TabIndex = 9;
+            cbAlwaysOnTop.Text = "Dialer always on top";
+            cbAlwaysOnTop.UseVisualStyleBackColor = true;
+            // 
             // SettingsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(343, 156);
+            ClientSize = new Size(343, 180);
+            Controls.Add(cbAlwaysOnTop);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(cbAskBeforeDial);
@@ -151,5 +163,6 @@
         private CheckBox cbAskBeforeDial;
         private Button btnSave;
         private Button btnCancel;
+        private CheckBox cbAlwaysOnTop;
     }
 }

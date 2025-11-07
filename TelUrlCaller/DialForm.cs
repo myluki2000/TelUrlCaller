@@ -19,6 +19,8 @@ namespace TelUrlCaller
             Bitmap icon = Properties.Resources.call_24dp_48752C_FILL0_wght400_GRAD0_opsz24;
             this.Icon = Icon.FromHandle(icon.GetHicon());
 
+            TopMost = Properties.Settings.Default.AlwaysOnTop;
+
             tbPhoneNumber.Text = phoneNumber;
         }
 

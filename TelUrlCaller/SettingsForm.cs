@@ -26,6 +26,7 @@ namespace TelUrlCaller
             Properties.Settings.Default.Username = tbUsername.Text;
             Properties.Settings.Default.Password = tbPassword.Text;
             Properties.Settings.Default.AskBeforeDial = cbAskBeforeDial.Checked;
+            Properties.Settings.Default.AlwaysOnTop = cbAlwaysOnTop.Checked;
             Properties.Settings.Default.Save();
             this.Close();
         }
@@ -36,6 +37,7 @@ namespace TelUrlCaller
             tbUsername.Text = Properties.Settings.Default.Username;
             tbPassword.Text = Properties.Settings.Default.Password;
             cbAskBeforeDial.Checked = Properties.Settings.Default.AskBeforeDial;
+            cbAlwaysOnTop.Checked = Properties.Settings.Default.AlwaysOnTop;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
