@@ -38,6 +38,9 @@
             btnSave = new Button();
             btnCancel = new Button();
             cbAlwaysOnTop = new CheckBox();
+            cbNormalizeNumbers = new CheckBox();
+            tbCountryCode = new TextBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -51,24 +54,27 @@
             // 
             // tbActionUri
             // 
+            tbActionUri.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbActionUri.Location = new Point(84, 12);
             tbActionUri.Name = "tbActionUri";
-            tbActionUri.Size = new Size(247, 23);
+            tbActionUri.Size = new Size(300, 23);
             tbActionUri.TabIndex = 1;
             // 
             // tbUsername
             // 
+            tbUsername.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbUsername.Location = new Point(84, 41);
             tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(247, 23);
+            tbUsername.Size = new Size(300, 23);
             tbUsername.TabIndex = 2;
             // 
             // tbPassword
             // 
+            tbPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbPassword.Location = new Point(84, 70);
             tbPassword.Name = "tbPassword";
             tbPassword.PasswordChar = '*';
-            tbPassword.Size = new Size(247, 23);
+            tbPassword.Size = new Size(300, 23);
             tbPassword.TabIndex = 3;
             // 
             // label2
@@ -101,7 +107,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(175, 149);
+            btnSave.Location = new Point(228, 176);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 7;
@@ -111,7 +117,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(256, 149);
+            btnCancel.Location = new Point(309, 176);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(75, 23);
             btnCancel.TabIndex = 8;
@@ -129,11 +135,41 @@
             cbAlwaysOnTop.Text = "Dialer always on top";
             cbAlwaysOnTop.UseVisualStyleBackColor = true;
             // 
+            // cbNormalizeNumbers
+            // 
+            cbNormalizeNumbers.AutoSize = true;
+            cbNormalizeNumbers.Location = new Point(12, 149);
+            cbNormalizeNumbers.Name = "cbNormalizeNumbers";
+            cbNormalizeNumbers.Size = new Size(198, 19);
+            cbNormalizeNumbers.TabIndex = 10;
+            cbNormalizeNumbers.Text = "Normalize input phone numbers";
+            cbNormalizeNumbers.UseVisualStyleBackColor = true;
+            cbNormalizeNumbers.CheckedChanged += cbNormalizeNumbers_CheckedChanged;
+            // 
+            // tbCountryCode
+            // 
+            tbCountryCode.Location = new Point(309, 147);
+            tbCountryCode.Name = "tbCountryCode";
+            tbCountryCode.Size = new Size(75, 23);
+            tbCountryCode.TabIndex = 11;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(219, 150);
+            label4.Name = "label4";
+            label4.Size = new Size(84, 15);
+            label4.TabIndex = 12;
+            label4.Text = "Country Code:";
+            // 
             // SettingsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(343, 180);
+            ClientSize = new Size(396, 206);
+            Controls.Add(label4);
+            Controls.Add(tbCountryCode);
+            Controls.Add(cbNormalizeNumbers);
             Controls.Add(cbAlwaysOnTop);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
@@ -164,5 +200,8 @@
         private Button btnSave;
         private Button btnCancel;
         private CheckBox cbAlwaysOnTop;
+        private CheckBox cbNormalizeNumbers;
+        private TextBox tbCountryCode;
+        private Label label4;
     }
 }

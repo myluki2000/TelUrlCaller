@@ -82,5 +82,29 @@ namespace TelUrlCaller.Properties {
                 this["AlwaysOnTop"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool NormalizeNumbers {
+            get {
+                return ((bool)(this["NormalizeNumbers"]));
+            }
+            set {
+                this["NormalizeNumbers"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CountryCode {
+            get {
+                return ((string)(this["CountryCode"]));
+            }
+            set {
+                this["CountryCode"] = value;
+            }
+        }
     }
 }

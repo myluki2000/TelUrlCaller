@@ -27,6 +27,8 @@ namespace TelUrlCaller
             Properties.Settings.Default.Password = tbPassword.Text;
             Properties.Settings.Default.AskBeforeDial = cbAskBeforeDial.Checked;
             Properties.Settings.Default.AlwaysOnTop = cbAlwaysOnTop.Checked;
+            Properties.Settings.Default.NormalizeNumbers = cbNormalizeNumbers.Checked;
+            Properties.Settings.Default.CountryCode = tbCountryCode.Text;
             Properties.Settings.Default.Save();
             this.Close();
         }
@@ -38,11 +40,20 @@ namespace TelUrlCaller
             tbPassword.Text = Properties.Settings.Default.Password;
             cbAskBeforeDial.Checked = Properties.Settings.Default.AskBeforeDial;
             cbAlwaysOnTop.Checked = Properties.Settings.Default.AlwaysOnTop;
+            cbNormalizeNumbers.Checked = Properties.Settings.Default.NormalizeNumbers;
+
+            tbCountryCode.Enabled = cbNormalizeNumbers.Checked;
+            tbCountryCode.Text = Properties.Settings.Default.CountryCode;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbNormalizeNumbers_CheckedChanged(object sender, EventArgs e)
+        {
+            tbCountryCode.Enabled = cbNormalizeNumbers.Checked;
         }
     }
 }
