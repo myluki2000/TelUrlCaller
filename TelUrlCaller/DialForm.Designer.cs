@@ -32,6 +32,7 @@
             label1 = new Label();
             btnCall = new Button();
             btnCancel = new Button();
+            btnSettings = new Button();
             SuspendLayout();
             // 
             // tbPhoneNumber
@@ -59,9 +60,9 @@
             btnCall.Font = new Font("Segoe UI", 12F);
             btnCall.Image = Properties.Resources.call_24dp_48752C_FILL0_wght400_GRAD0_opsz24;
             btnCall.ImageAlign = ContentAlignment.MiddleRight;
-            btnCall.Location = new Point(222, 74);
+            btnCall.Location = new Point(214, 74);
             btnCall.Name = "btnCall";
-            btnCall.Size = new Size(96, 35);
+            btnCall.Size = new Size(100, 35);
             btnCall.TabIndex = 2;
             btnCall.Text = "Call";
             btnCall.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -74,14 +75,29 @@
             btnCancel.Font = new Font("Segoe UI", 12F);
             btnCancel.Image = Properties.Resources.cancel_24dp_8B1A10_FILL0_wght400_GRAD0_opsz24;
             btnCancel.ImageAlign = ContentAlignment.MiddleRight;
-            btnCancel.Location = new Point(324, 74);
+            btnCancel.Location = new Point(320, 74);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(96, 35);
+            btnCancel.Size = new Size(100, 35);
             btnCancel.TabIndex = 3;
             btnCancel.Text = "Cancel";
             btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
+            // 
+            // btnSettings
+            // 
+            btnSettings.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSettings.Font = new Font("Segoe UI", 12F);
+            btnSettings.Image = Properties.Resources.settings_24dp_000000_FILL0_wght400_GRAD0_opsz24;
+            btnSettings.ImageAlign = ContentAlignment.MiddleRight;
+            btnSettings.Location = new Point(12, 74);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Size = new Size(100, 35);
+            btnSettings.TabIndex = 4;
+            btnSettings.Text = "Settings";
+            btnSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSettings.UseVisualStyleBackColor = true;
+            btnSettings.Click += btnSettings_Click;
             // 
             // DialForm
             // 
@@ -89,6 +105,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(432, 117);
+            Controls.Add(btnSettings);
             Controls.Add(btnCancel);
             Controls.Add(btnCall);
             Controls.Add(label1);
@@ -108,5 +125,6 @@
         private Label label1;
         private Button btnCall;
         private Button btnCancel;
+        private Button btnSettings;
     }
 }

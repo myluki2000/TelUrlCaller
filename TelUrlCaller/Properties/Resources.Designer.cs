@@ -79,5 +79,15 @@ namespace TelUrlCaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_24dp_000000_FILL0_wght400_GRAD0_opsz24 {
+            get {
+                object obj = ResourceManager.GetObject("settings_24dp_000000_FILL0_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
