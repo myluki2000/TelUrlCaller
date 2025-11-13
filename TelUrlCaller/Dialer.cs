@@ -13,7 +13,8 @@ namespace TelUrlCaller
         {
             using HttpClient client = new();
 
-            string requestUri = Properties.Settings.Default.ActionUri.Replace("{number}", Uri.EscapeDataString(number));
+            string requestUri = Properties.Settings.Default.ActionUri
+                .Replace("{number}", Uri.EscapeDataString(number).Replace("%2B", "+"));
 
             HttpRequestMessage req = new(HttpMethod.Get, requestUri);
             req.Headers.Authorization =
